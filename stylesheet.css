@@ -1,51 +1,139 @@
 /* only hero container padding */
-.container {
-    padding: 4rem;
-    border-radius: 0%;
-    width: 400px;
+.my-container {
+  
+  border-radius: 0%;
+  /* width: 800px; */
+  width: 100%;
+}
+#ascii {
+  white-space: pre;
+  font-family: monospace;
+  font-size: 90px;
+  color: #00ff99;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-1-text {
+  color: hsl(0, 0%, 90%);
+  font-size: 20px;
+  line-height: 1.6;
+  position: absolute;
 }
 
 .marquee {
-    font-family: "Science Gothic", sans-serif;
-    font-size: 75px;
-    font-style: normal;
-    font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
-    z-index: 2;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
+  z-index: 2;
 }
-
+.my-card-m {
+  margin: 2rem;
+  width: 95%;
+  height: 2000px;
+  background-color: hsl(60, 6%, 97%);
+  shadow: 2px 2px;
+}
 /* remove giant padding from ALL containers */
-.container {
-    
 
 /* card styling */
-.card {
-  border-radius: 18px !important;
-  border: 2px solid rgba(77, 76, 76, 0.15) !important;
+.my-card {
+  border: 1px solid rgba(70, 67, 67, 0.15) !important;
+  bor
+  border-radius: 0%;
   overflow: hidden;
-  background-color: #ffffff !important;
+  background-color: #282727 !important;
   margin-bottom: 1.5rem;
   position: relative;
 }
-
+.card-img-overlay {
+  z-index: 6;
+}
 /* page background */
 body {
-    background-color: aquamarine;
+  background-color: hsl(0, 3%, 27%);
 }
 .hero {
-    radius: 0%;
+  radius: 0%;
 }
 .ggbridge {
-     position: relative;
-     z-index: 1;
-     top: 0;
+  position: relative;
+  z-index: 1;
+  top: 0;
   left: 0;
   width: 100%;
 }
 .ogcomp {
-   position: absolute;
-  top: 0;
+  position: relative;
+  padding-top: 2rem;
   left: 0;
-  width: 60%;      /* adjust size */
-  transform: translate(-20%, 10%); /* moves it */
-  z-index: 2;     
+  width: 60%; /* adjust size */
+  transform: translate(70%, 0%); /* moves it */
+  z-index: 2;
+}
+
+.cardd {
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  background-image: url("bridgeday.jpeg");
+}
+
+.hedda {
+  position: relative;
+  left: 160px;
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 90px;
+}
+
+
+.hero-1-text {
+  position: relative;
+  top: 50px;
+  left: 100px;
+  width: 600px;
+ font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  color: hsl(0, 9%, 74%);
+ 
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    
+}
+
+.card-mini {
+  margin-top: 6rem;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(59, 59, 59);
+}
+
+
+#scrollToTopBtn {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%; /* Circular button */
+    padding: 13rem;
+    font-size: 64px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    width: 60px;
+    height: 600px;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
