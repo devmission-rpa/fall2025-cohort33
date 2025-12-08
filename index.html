@@ -3,129 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link href="stylesheet.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.2.4/figlet.min.js"></script>
     <script src="main.js"></script>
-
     <title>Directory Website</title>
   </head>
-  <body>
+
+  <body class="landing">
     <!-- ===== NAVBAR ===== -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-placeholder">
-      <!-- Add navbar here -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark bg-body-tertiary fixed-top bg-body-tertiary"
+      data-bs-theme="dark"
+    >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><h1><strong>COHORT 33 | dev mission</strong></h1></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">DEV/MISSION</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Download</a>
+              <a class="nav-link" href="#">Directory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
             </li>
           </ul>
+          <span class="navbar-text"> COHORT 33 </span>
         </div>
       </div>
     </nav>
-
-    <!-- ===== HERO SECTION ===== -->
-    <header class="container hero">
-      <section class="hero-1">
-        <span class="subhead">   
-          <!-- Title + subheading --> 
-        </span>
-      </section>
-
-      <section class="article">
-        <!-- Hero article content goes here -->
-      </section>
-    </header>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <article class="container abt-l">
-      <section class="subhead">   
-        <!--  heading -->
-        <h6>Eyebrow text to label this content</h6>
-      </section>
-
-      <section class="header">   
-        <!-- bio -->
-        <h3>
-          <strong>
-            A headline for<br> 
-            some text
-          </strong>
-        </h3>
-      </section>
-
-      <section class="article">   
-        <!-- content -->
-        <p>
-          On the one hand, all you need to do is say what you mean, in your words, in your voice. On the other, there are so many<br>
-          rules to consider! Are you thinking of keywords you should rank for? Are you including links in your text to additional<br>
-          information? Do those links refer back to your own website, which helps boost your SEO? Is what you've written easy to<br>
-          scan? There's a theory that people read in an F-shape pattern, and that this should influence how your structure content on<br>
-          your website. Lots of ins and outs--it's no wonder writers rule the world.
-        </p>
-      </section>
-    </article>
-
-    <!-- ===== QUOTE SECTION ===== -->
-    <article class="container quote">
-      <section class="subhead">    
-        <!-- heading + quote -->
-        <h3>
-          <strong>
-            "A large, heavily bolded quote for emphasis and<br>
-            breaking up content."
-          </strong>
-        </h3>
-        <h6>
-          <strong>Andi Antennae,</strong> Transport at Suite Nectar
-        </h6> 
-      </section>
-    </article>
-
-    <!-- ===== STICKY IMAGE 3 PPL ===== -->
-    <article class="container marquee">
-      <section>
-        <div class="stk-img row">    
-          <!-- Header + Content + 3 Person IMG-->
-          <div class="col">
-            <h2>
-              <strong>
-                A bold headline<br>
-                that delivers
-              </strong>
-            </h2>
-            <h6>
-              Go ahead and say just a little more<br>
-              about what you do.
-            </h6>
-            <button type="button" class="btn btn-primary">Call to action</button>
-            <button type="button" class="btn btn-secondary">Secondary</button>
+    <header class="old-hero">
+      <div class="cardd">
+        <span class="hedda"><h1>COHORT 33</h1></span><button class="button">CLICK ME</button>
+        <figure>
+          <img src="computer_480.png" class="ogcomp" />
+          <div class="static-container">
+            <!-- <img src="static.jpg" class="static" /> -->
           </div>
-          <div class="col">
-            <img src="3-People.png" alt="3-People">
-          </div>  
-        </div>
-      </section>
-    </article>
+        </figure>
+      </div>
+    </header>
+   <h2 class="meep">WELCOME YOU BELONG<br> HERE</h2>
+      <p class="hero-1-text">
+        Welcome to the Fall 2025 Cohort 33 Directory Website!<br />
+        Here, you'll find information about our talented group of individuals,
+        their projects, and more. Explore and get to know us better!
+      </p>
+      <div class="card-mini">video content goes on this card</div>
+    </div>
+    <div class="card-mini-m"> </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="container">
-      <section class="footer">    
-        <!-- footer -->
-        <p class="text-center">Drop some names with confidence</p> 
-      </section>
-    </footer>
-
+    <!-- ===== BOOTSTRAP JS ===== -->
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
