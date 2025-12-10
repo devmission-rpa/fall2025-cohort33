@@ -17,8 +17,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- YOUR CSS -->
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link href="stylesheet.css" rel="stylesheet" />
 
     <!-- JS -->
@@ -66,68 +68,54 @@
         </div>
       </div>
     </nav>
+  <header class="old-hero">
+    <div class="card-mini"></div>
+  <div class="cardd">
+  
+    <article><span class="hedda">
+      <h1 class = "bounce-in">COHORT 33</h1>
+    </span></article>
+    
 
-    <!-- ===== HERO ===== -->
-    <header class="old-hero">
-      <div class="card-mini"></div>
+    <!-- your button class kept -->
+    <button id="video-button" class="button">press play</button>
 
-      <div class="cardd">
-        <article>
-          <span class="hedda">
-            <h1>COHORT 33</h1>
-          </span>
-        </article>
+    <figure>
+         <img src="computer_480.png" class="ogcomp" />
+      <!-- VIDEO CONTAINER inserted, class names adjusted to match your structure -->
+      <div class="video-container">
+        <div class="overlay"></div>
+        <video class="video" loop>
+          <source src="verizon-video.mp4" type="video/mp4">
+        </video>
+      </div> 
 
-        <!-- BUTTON -->
-        <button id="video-button" class="button">press play</button>
+      <!-- your original computer image kept -->
 
-        <!-- COMPUTER + VIDEO -->
-        <figure>
-          <img src="computer_480.png" class="ogcomp" />
+    </figure>
+  </div>
+</header>
+<main>
+  <div class="mini-card-1"></div><div class="hero-1">
+    <h2 class="meep"><span class = "punchline1">WELCOME</span> <span class = "punchline2">YOU BELONG<br> HERE</span></h2>
+    <p class="hero-1-text punchline">
+      Creators. Innovators. Future technologists.<br><br>
+      This directory highlights the students of Cohort 33—creators, builders, and problem-solvers learning to shape the future of tech.
+    </p> 
+  </div>
+<container><img class="lala" src="Unlimited..gif"></container>
 
-          <div class="video-container">
-            <div class="overlay"></div>
-            <video class="video" loop>
-              <source src="verizon-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </figure>
-      </div>
-    </header>
+  <article class="info-section">
+    <div class="card-mini">
+      <div class="card-mini-m"><span class="meep  info"><h1>INFO SECTION</h1></span></div>
+    </div>
+    <div class="card-mini-m"> </div>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-      <div class="mini-card-1"></div>
+    <!-- ===== BOOTSTRAP JS ===== -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ===== FADE IN LIBRARY ===== -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="main.js"></script>
 
-      <div class="hero-1">
-        <h2 class="meep">
-          WELCOME YOU BELONG<br />
-          HERE
-        </h2>
-
-        <p class="hero-1-text">
-          Creators. Innovators. Future technologists.<br /><br />
-          This directory highlights the students of Cohort 33—creators,
-          builders, and problem-solvers learning to shape the future of tech.
-        </p>
-      </div>
-
-      <!-- GIF -->
-      <div class="image-container">
-        <img class="lala" src="Unlimited..gif" />
-      </div>
-
-      <!-- INFO SECTION -->
-      <article class="info-section">
-        <div class="card-mini">
-          <div class="card-mini-m">
-            <span class="meep info"><h1>INFO SECTION</h1></span>
-          </div>
-        </div>
-      </article>
-    </main>
-
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
