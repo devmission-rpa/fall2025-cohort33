@@ -3,94 +3,115 @@
   --color: hsl(0, 0%, 10%);
 }
 
-/* GLOBAL -------------------------- */
 body {
   font: 16px Arial, sans-serif;
   color: var(--color);
-  margin: 0;
-  padding: 0;s
-  background-color: hsl(0, 0%, 95%);
+  margin: 2px; /* was “2” with no unit */
+  padding: 0;
+  background-color: rgb(106, 107, 107);
   overflow-x: hidden;
 }
 
-/* NAV ----------------------------- */
 nav {
   height: var(--nav-height);
+  /* display: none !important; */
 }
 
-/* HERO ----------------------------- */
 .landing header {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-top: var(--nav-height);
+  background-color: rgba(255, 255, 255, 0);
   width: 100%;
   height: 600px;
   aspect-ratio: 16 / 9;
-  background-color: transparent;
 }
-
-/* Corrected pseudo-element selector */
+.navbar-text,
+.nav-item {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 1px;
+}
 .landing header::before {
+  /* FIXED spacing */
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("landing-bg.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
 
-/* TITLE --------------------------- */
 .landing h1 {
   margin-top: 10%;
   margin-left: 2%;
   font-weight: 600;
   font-size: 90px;
   letter-spacing: 2px;
-  text-shadow: -2px -2px 2px white, 
-               2px -2px 2px white,
-              -2px 2px 2px white,
-               2px 2px 2px white;
+  text-shadow: -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white,
+    2px 2px 2px white;
   z-index: 8;
 }
 
-/* FIGURE + COMPUTER --------------- */
 .landing figure {
-  width: 100%;
-  height: 500px; /* fixed “haight” typo */
   display: inline-block;
-  position: relative;
+  width: 100%;
+  height: 500px; /* FIXED “haight” */
 }
 
 .ogcomp {
-  position: relative;
   top: -150px;
+  position: relative;
+  padding-top: 1rem;
   left: -3%;
   width: 55%;
   transform: translate(80%, -30%);
-  padding-top: 1rem;
   z-index: 10;
 }
 
-/* STATIC IMAGE -------------------- */
 .static {
   position: absolute;
   top: 20%;
   left: 0;
   width: 20%;
   z-index: 1;
-  opacity: 1;
+  opacity: 1; /* fixed 100 to 1 */
 }
 
-/* CARDS ---------------------------- */
-.my-card {
-  border: 1px solid rgba(70, 67, 67, 0.15);
+/* only hero container padding */
+.my-container {
+  border-radius: 0%;
   width: 90%;
-  border-radius: 0;
+}
+
+.marquee {
+  font-family: "Science Gothic", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
+  z-index: 2;
+}
+
+.old-hero {
+  height: 100%;
+  width: 100%;
+}
+
+/* card styling */
+.my-card {
+  border: 1px solid rgba(70, 67, 67, 0.15) !important;
+  width: 100%;
+  border-radius: 0%;
   overflow: hidden;
-  background-color: #e0dbdb;
+  background-color: #282727 !important;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -99,48 +120,63 @@ nav {
   z-index: 6;
 }
 
-/* OLD HERO BG --------------------- */
-.old-hero {
-  height: 100%;
+.hero {
+  border-radius: 0%;
+  background-position: center;
   width: 100%;
+  height: 600px;
+}
+
+.ggbridge {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 800px;
 }
 
 .cardd {
+  background-position: center;
   width: 100%;
   height: 600px;
-  background-position: center;
   background-image: url("bridgeday.jpeg");
 }
 
-/* HERO HEADING -------------------- */
 .hedda {
   position: relative;
   top: -60px;
   left: 130px;
   font-family: "BBH Sans Bogle", sans-serif;
   font-weight: 300;
-  font-size: 23px; /* fixed */
+  font-style: normal;
+  font-size: 23px; /* FIXED “23 px” */
 }
 
-/* VIDEO SECTION ------------------- */
+/* ===== VIDEO INSIDE COMPUTER ===== */
 .video-container {
   position: absolute;
   top: 22%;
   left: 52%;
   width: 30%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   z-index: 3;
+
   background-color: black;
   background-image: url("dev-mission.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   overflow: hidden;
 }
 
+/* static overlay */
 .overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* fixed missing unit */
   background-image: url("static.jpg");
   background-size: cover;
   background-position: center;
@@ -153,6 +189,7 @@ nav {
   opacity: 0;
 }
 
+/* video */
 video {
   width: 100%;
   height: 100%;
@@ -166,7 +203,6 @@ video.active {
   opacity: 1;
 }
 
-/* HERO SECTION -------------------- */
 .hero-1-text {
   position: relative;
   top: 50px;
@@ -174,16 +210,18 @@ video.active {
   width: 600px;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  color: hsl(0, 0%, 13%);
+  color: hsl(0, 9%, 93%);
   z-index: 8;
 }
 
 .lala {
   position: relative;
   top: 60px;
-  width: 100%;
-  height: 600px;
-  margin-top: 6rem;
+  left: 0px;
+  margin: 2rem;
+  width: 1400px;
+  height: 700px;
+  margin-top: 8rem;
 }
 
 .card-mini {
@@ -192,7 +230,6 @@ video.active {
   background-color: rgb(59, 59, 59);
 }
 
-/* INFO SECTION -------------------- */
 .info-section {
   margin-top: 1rem;
   width: 100%;
@@ -200,27 +237,32 @@ video.active {
   background-color: rgb(200, 200, 200);
 }
 
-/* PLAY BUTTON --------------------- */
 .button {
   margin-left: 15rem;
   padding: 10px 20px;
-  font-size: 70px;
-  width: 300px;
+  font-size: 65px;
+  width: 600px;
   height: 200px;
-  background-color: rgba(200, 200, 200, 0.7);
-  border-radius: 3%;
-  border: 2px solid #282727;
+  background-color: rgba(211, 209, 209, 0.717);
+  border-radius: 35%;
+  border: 2px solid #838181; /* fixed */
+  font-family: "Share Tech", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
-/* HEADERS ------------------------- */
 .meep {
+  position: relative;
   text-align: left;
-  margin: 2rem;
-  padding: 10px;
+  left: 4rem;
+  width: 1250px;
+  height: auto;
   font-size: 64px;
   font-family: "BBH Sans Bogle", sans-serif;
   font-weight: 300;
   font-style: normal;
+<<<<<<< Updated upstream
   letter-spacing: 1px
   z-index: 8;
 
@@ -232,6 +274,14 @@ video.active {
 .card-mini-m {
   margin-top: 1rem;
   width: 90%;
+=======
+  letter-spacing: 1px;
+  z-index: 8;
+}
+
+.card-mini-m {
+  width: 100%;
+>>>>>>> Stashed changes
   height: 600px;
   background-color: rgb(187, 187, 187);
 }
@@ -244,6 +294,7 @@ video.active {
 }
 
 .mini-card-1 {
+<<<<<<< Updated upstream
   position: absolute;
   width: 95%;
   height: 100%;
@@ -265,3 +316,13 @@ video.active {
 
 
 
+=======
+  position: relative; /* no more floating square */
+  width: 100%; /* fills full width cleanly */
+  height: auto; /* stops creating random blocks */
+  background-color: rgba(59, 59, 59, 0.728);
+  margin: 0;
+  padding: 2rem 0; /* optional: gives breathing room */
+  z-index: 0; /* behind hero content */
+}
+>>>>>>> Stashed changes
