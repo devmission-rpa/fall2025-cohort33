@@ -2,174 +2,145 @@
   --nav-height: 5rem;
   --color: hsl(0, 0%, 10%);
 }
+
+/* GLOBAL -------------------------- */
 body {
   font: 16px Arial, sans-serif;
   color: var(--color);
-  margin: 2;
-  padding: 0;
-  background-color: rgb(106, 107, 107);
-   overflow-x: hidden;
+  margin: 0;
+  padding: 0;s
+  background-color: hsl(0, 0%, 95%);
+  overflow-x: hidden;
 }
 
+/* NAV ----------------------------- */
 nav {
   height: var(--nav-height);
-  /* display: none !important; */
 }
+
+/* HERO ----------------------------- */
 .landing header {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   margin: 0 auto;
   margin-top: var(--nav-height);
-
-  background-color: rgba(255, 255, 255, 0);
-  /* background-color: lightblue; */
   width: 100%;
   height: 600px;
   aspect-ratio: 16 / 9;
-  /* background-color: hsl(60, 44%, 33%); */
-
-  /* box-shadow: 2px 2px; */
+  background-color: transparent;
 }
-.landing header ::before {
+
+/* Corrected pseudo-element selector */
+.landing header::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: url("landing-bg.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
 
+/* TITLE --------------------------- */
 .landing h1 {
   margin-top: 10%;
   margin-left: 2%;
   font-weight: 600;
   font-size: 90px;
   letter-spacing: 2px;
-  text-shadow: -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white,
-    2px 2px 2px white;
-    z-index: 8;
+  text-shadow: -2px -2px 2px white, 
+               2px -2px 2px white,
+              -2px 2px 2px white,
+               2px 2px 2px white;
+  z-index: 8;
 }
+
+/* FIGURE + COMPUTER --------------- */
 .landing figure {
-  display: inline-block;
-  /* position: relative; */
   width: 100%;
-  haight: 500px;
-}
-.ogcomp {
-  top: -150px;
+  height: 500px; /* fixed “haight” typo */
+  display: inline-block;
   position: relative;
-  padding-top: 1rem;
+}
+
+.ogcomp {
+  position: relative;
+  top: -150px;
   left: -3%;
-  width: 55%; /* adjust size */
-  transform: translate(80%, -30%); /* moves it */
+  width: 55%;
+  transform: translate(80%, -30%);
+  padding-top: 1rem;
   z-index: 10;
 }
+
+/* STATIC IMAGE -------------------- */
 .static {
   position: absolute;
   top: 20%;
   left: 0;
-  width: 20%; /* adjust size */
+  width: 20%;
   z-index: 1;
-  opacity: 100;
-}
-/* only hero container padding */
-.my-container {
-  border-radius: 0%;
-  /* width: 800px; */
-  width: 90%;
+  opacity: 1;
 }
 
-.marquee {
-  font-family: "Science Gothic", sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
-  z-index: 2;
-}
-
-.old-hero {
-  height: 100%;
-  width: 100%;
-}
-/* remove giant padding from ALL containers */
-
-/* card styling */
+/* CARDS ---------------------------- */
 .my-card {
-  border: 1px solid rgba(70, 67, 67, 0.15) !important;
-  width: 100%;
-
-  border-radius: 0%;
+  border: 1px solid rgba(70, 67, 67, 0.15);
+  width: 90%;
+  border-radius: 0;
   overflow: hidden;
-  background-color: #282727 !important;
+  background-color: #e0dbdb;
   margin-bottom: 1.5rem;
   position: relative;
 }
+
 .card-img-overlay {
   z-index: 6;
 }
 
-.hero {
-  border-radius: 0%; background-position: center;
+/* OLD HERO BG --------------------- */
+.old-hero {
+  height: 100%;
   width: 100%;
-  height: 600px;
-
-}
-.ggbridge {
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 800px;
 }
 
 .cardd {
-  background-position: center;
   width: 100%;
   height: 600px;
+  background-position: center;
   background-image: url("bridgeday.jpeg");
 }
 
+/* HERO HEADING -------------------- */
 .hedda {
   position: relative;
   top: -60px;
   left: 130px;
   font-family: "BBH Sans Bogle", sans-serif;
   font-weight: 300;
-  font-style: normal;
-  font-size:  23 px;
+  font-size: 23px; /* fixed */
 }
-/* ===== VIDEO INSIDE COMPUTER ===== */
-/* ===== SQUARE VIDEO INSIDE COMPUTER ===== */
+
+/* VIDEO SECTION ------------------- */
 .video-container {
   position: absolute;
-  top: 22%;          /* moves screen higher */
-  left: 52%;         /* aligns with your translated computer */
-  width: 30%;        /* larger = more square */
-  aspect-ratio: 1/1; /* makes it a perfect square */
+  top: 22%;
+  left: 52%;
+  width: 30%;
+  aspect-ratio: 1/1;
   z-index: 3;
-  
   background-color: black;
   background-image: url("dev-mission.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
   overflow: hidden;
 }
 
-/* static overlay */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;      /* FIXED */
+  inset: 0;
   background-image: url("static.jpg");
   background-size: cover;
   background-position: center;
@@ -182,7 +153,6 @@ nav {
   opacity: 0;
 }
 
-/* video */
 video {
   width: 100%;
   height: 100%;
@@ -196,34 +166,33 @@ video.active {
   opacity: 1;
 }
 
-
+/* HERO SECTION -------------------- */
 .hero-1-text {
   position: relative;
   top: 50px;
   left: 55px;
   width: 600px;
   font-family: "Roboto", sans-serif;
- font-size: 20px;
-  color: hsl(0, 9%, 93%);
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-size: 20px;
+  color: hsl(0, 0%, 13%);
   z-index: 8;
 }
+
 .lala {
   position: relative;
   top: 60px;
-  left: 0px;
   width: 100%;
   height: 600px;
   margin-top: 6rem;
 }
-.card-mini {
 
+.card-mini {
   width: 100%;
   height: 150px;
   background-color: rgb(59, 59, 59);
 }
 
+/* INFO SECTION -------------------- */
 .info-section {
   margin-top: 1rem;
   width: 100%;
@@ -231,25 +200,23 @@ video.active {
   background-color: rgb(200, 200, 200);
 }
 
-
-
-
+/* PLAY BUTTON --------------------- */
 .button {
   margin-left: 15rem;
   padding: 10px 20px;
   font-size: 70px;
   width: 300px;
   height: 200px;
-  background-color: rgba(200, 200, 200, 0.717);
+  background-color: rgba(200, 200, 200, 0.7);
   border-radius: 3%;
-  border-color: #282727;
+  border: 2px solid #282727;
 }
 
+/* HEADERS ------------------------- */
 .meep {
   text-align: left;
   margin: 2rem;
-  padding: 10px 10px 5px;
-  left: 4rem;
+  padding: 10px;
   font-size: 64px;
   font-family: "BBH Sans Bogle", sans-serif;
   font-weight: 300;
