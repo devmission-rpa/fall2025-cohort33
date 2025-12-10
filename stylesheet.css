@@ -266,11 +266,11 @@ video.active {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   letter-spacing: 1px
-  z-index: 8;
+  /* z-index: 8; */
 
  
 
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .card-mini-m {
