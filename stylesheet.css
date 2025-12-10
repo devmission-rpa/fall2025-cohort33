@@ -286,3 +286,10 @@ video.active {
   margin-right: 2rem;
   z-index: 1;
 }
+
+/* Animation */
+
+.bounce-in{
+  animation: backInDown;
+  animation-duration: 1.5s;
+}
