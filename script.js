@@ -35,9 +35,12 @@ function addRecordToHTML(record, html) {
 }
 async function getAllStudentsRecords() {
   let getResultElement = document.getElementById("js-students-name-tag");
+  const loadingElement = document.querySelector(".loading");
   await fetch(traineesUrl, options)
     .then((response) => response.json())
     .then((data) => {
+      loadingElement.style.display = "none";
+      console.log(JSON.stringify(data, null, 2));
       let newHTML = "";
       getResultElement.innerHTML = newHTML;
       const repeat = data.records.length * 2;
@@ -56,6 +59,7 @@ async function getAllRecords() {
   await fetch(programLeaderURL, options)
     .then((response) => response.json())
     .then((data) => {
+      console.log(JSON.stringify(data, null, 2));
       getResultElement.innerHTML = "";
       let newHTML = "";
       for (let i = 0; i < data.records.length; i++) {

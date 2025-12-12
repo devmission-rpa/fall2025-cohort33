@@ -1,170 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" content="Dev/Mission Cohort 33 Class Web Site">
+    <meta name="og:description" content="Dev/Mission Cohort 33 Class Web Site">
+    <meta name="description" content="Dev/Mission Cohort 33 Class Web Site">
+    <meta
+      name="og:image"
+      content="https://devmission-rpa.github.io/fall2025-cohort33/web-page.png"
+    >
+    <meta
+      name="og:url"
+      content="https://devmission-rpa.github.io/fall2025-cohort33/"
+    >
+    <meta
+      property="og:image:alt"
+      content="Dev/Mission Cohort 33 Class Web Site"
+    >
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Roboto:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    >
     <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle"
       rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- BOOTSTRAP -->
+    >
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-    />
-     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link href="stylesheet.css" rel="stylesheet" />
-
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/figlet@1.2.4/figlet.min.js"></script>
-    <script src="main.js" defer></script>
-
-    <title>Directory Website</title>
+    >
+    <link href="stylesheet.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/figlet@1.2.4/figlet.min.js"></script> -->
+    <!-- <script src="main.js"></script> -->
+    <title>Cohort 33 Home</title>
   </head>
 
   <body class="landing">
     <!-- ===== NAVBAR ===== -->
     <nav
-      class="navbar navbar-expand-lg bg-dark bg-body-tertiary fixed-top"
+      class="navbar navbar-expand-md bg-dark bg-body-tertiary fixed-top bg-body-tertiary my-container"
       data-bs-theme="dark"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">DEV/MISSION</a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-             
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="directory.html">Directory</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-          </ul>
-
-          <span class="navbar-text">COHORT 33</span>
-        </div>
+      <!-- <div class="container-fluid my-container"> -->
+      <a class="navbar-brand" href="#">DEV/MISSION</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="directory.html">Directory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+        <span class="navbar-text"> COHORT 33 </span>
       </div>
+      <!-- </div> -->
     </nav>
-
-    <!-- ===== HERO ===== -->
-    <header class="old-hero">
-      <div class="card-mini"></div>
-
-      <div class="cardd">
-        <article>
-          <span class="hedda">
-            <h1>COHORT 33</h1>
-          </span>
-        </article>
-
-
-    <button id="video-button" class="button">press play</button>
-
-        <!-- COMPUTER + VIDEO -->
-        <figure>
-          <img src="computer_480.png" class="ogcomp" />
-
-          <div class="video-container">
-            <div class="overlay"></div>
-            <video class="video" loop>
-              <source src="verizon-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </figure>
-      </div>
+    <!-- <header class="hero my-container"> -->
+    <header class="hero my-container">
+      <h1>COHORT 33</h1>
+      <!-- <a href="./directory.html">CLICK ME</a> -->
+      <button id="video-button">press play</button>
+      <figure>
+        <div class="video-container">
+          <div class="overlay"></div>
+          <video loop>
+            <!-- <source src="assets/tree.mp4" type="video/mp4"> -->
+            <source src="verizon-video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <img src="computer_480.png">
+        <figcaption class="screen-reader">
+          <p>
+            Image of an old computer. Tbe computer screen displays the
+            Dev/Mission ascii logo. When the user clicks the "press play"
+            button, the computer screen displays a video of the students in
+            Cohort 33.
+          </p>
+        </figcaption>
+      </figure>
     </header>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-      <div class="mini-card-1"></div>
-
-      <div class="hero-1">
-        <h2 class="meep">WELCOME YOU BELONG</h2>
-        <h3 class="meep">HERE</h3>
-
-        <p class="hero-1-text">
-          Creators. Innovators. Future technologists.<br /><br />
+    <main class="my-container">
+      <article class="welcome">
+        <header>
+          <h2>WELCOME</h2>
+          <h3>YOU BELONG HERE</h3>
+        </header>
+        <p>Creators. Innovators. Future technologists.</p>
+        <p>
           This directory highlights the students of Cohort 33—creators,
           builders, and problem-solvers learning to shape the future of tech.
         </p>
-      </div>
-
-      <!-- GIF -->
-    
-    
-
-  </div>
-</header>
-<main>
- 
-<container><img class="lala" src="Unlimited..gif"></container>
-
-      <!-- INFO SECTION -->
-
-      <div class="card-mini-m">
-        
-  <article class="info-section">
-    <div class="card-mini">
-      <div class="card-mini-m"><span class="meep  info"><h1>INFO SECTION</h1></span></div>
-    </div>
-    <div class="card-mini-m"><div class="card-mini-m">
-  <div class="card border-secondary col-4 skew-card">
-    <div class="card-header">Hey there</div>
-    <div class="card-body text-secondary">
-      <h5 class="card-title">Welcome to Cohort 33's Class Directory page</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    </div>
-  </div>
-
-  <img src="brows.png" class="brows">
-</div>
-
-
-    
-
-    
-    
+      </article>
+      <!-- <article class="card-mini">video content goes on this card</article> -->
+      <article class="landing-gif">
+        <a href="./directory.html">
+          <img src="landing.gif">
+        </a>
+      </article>
     </main>
 
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- ===== BOOTSTRAP JS ===== -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="main.js"></script>
   </body>
 </html>
-
