@@ -16,11 +16,12 @@ function addRecordToHTML(record, html) {
   let openTo = record.fields["OpenTo"];
   let linkedln = record.fields["Linkedin"];
   let pic = record.fields["Headshots"]?.[0]?.url || "";
+  let webapp = record.fields["App"];
   html += `
           <div class="student-name-tag">
             <img src="name-tag.png" class="name-tag">
             <div class="student-info">
-              <img src="${pic}" class="headshot">
+              <a href="${webapp}" target="_blank"><img src="${pic}" class="headshot"></a>
               <h5 class="name">${name}</h5>
               <span class="open-to-badge">Open to: ${openTo}</span>
               <p class="highlight">${info}</p>

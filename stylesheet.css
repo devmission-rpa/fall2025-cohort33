@@ -506,3 +506,7 @@ body.projects {
   background-color: rgb(187, 187, 187);
   flex-grow: 1;
 }
+
+.comp {
+  height: 20rem;
+}
